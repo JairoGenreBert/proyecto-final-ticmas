@@ -1,0 +1,165 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+nav{
+    text-align: center;
+}
+header{
+    background-color: darkblue;
+    color: white;
+    height: 40vh;
+    display: grid;
+    /*grid-template-columns: repeat(2,1fr);*/
+    grid-template-rows: 30vh 10vh;
+    grid-template-columns: 26vw 50vw 24vw;
+}
+
+#nombre{
+    font-weight: normal;
+}
+
+h1{
+    display: inline;
+    float: left;
+    text-align: left;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    margin: auto auto 0 2vw;
+    font-family: 'Roboto', sans-serif;
+}
+
+header span{
+    display: block;
+    margin: 0 0 0.5em 0;
+}
+
+header p{
+    text-align: left;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    margin: 0 auto 0 2vw;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+address{
+    /*display: inline;
+    float: rigth;*/
+    grid-row: 1/3;
+    grid-column: 3/4;
+    margin: auto;
+    
+}
+
+address *{
+    font-family: 'Open Sans', sans-serif;
+    margin: 1vh;
+}
+
+
+address a:link {
+    color: white;
+    text-decoration: none;
+}
+address a:visited {
+    text-decoration: none;
+    color: white;
+
+}
+a:hover {
+text-decoration:none;
+color: white;
+zoom: 120%;
+
+}
+
+#sidebar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1vw;
+    width: 25vw;
+    z-index: 1;
+    background-color: blue;
+}
+#foto_perfil{
+    border-radius: 50%;
+    width: 65%; 
+    z-index: 1;
+    display: block;
+    margin: 10% auto 10% auto;
+}
+#sidebar *{
+    color: white;
+    font-family: 'Lato', sans-serif;
+
+}
+#sidebar>h2{
+    text-align: center;
+   
+}
+#sidebar>p{
+    text-align: justify;
+    
+    margin: 1em;
+}
+#sidebar>h3{
+    margin: 1em; 
+}
+
+#sidebar>ul{
+   
+    margin: 1em 3em 1em 3em;
+
+}
+
+
+.meter{
+    float:right;
+    width: 10vw;
+}
+
+
+main *{
+    font-family: 'Lato', sans-serif;
+}
+
+main{
+    margin: 0 0 0 26vw;
+    padding: 2vh 2vw 2vh 2vw;
+}
+
+main h2{
+    margin: 2em;
+    color: darkblue;
+}
+
+
+
+main .exp_y_edu{
+    display: grid;
+    grid-template-columns: 10em auto;
+    grid-template-rows: 2em  1em fit-content;
+    margin-bottom: 3vh;
+}
+main .fecha{
+    grid-row: 1/4;
+    grid-column: 1/2;
+}
+
+.exp_y_edu h3{
+    grid-row: 1/2;
+    grid-column: 2/3;    
+}
+
+.exp_y_edu address{
+    grid-row: 2/3;
+    grid-column: 2/3; 
+}
+
+.exp_y_edu ul{
+    grid-row: 3/4;
+    grid-column: 2/3; 
+}
+
