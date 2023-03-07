@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Linkeo la hoja de estilos  -->
     <link rel="stylesheet" href="estilos.css">
+    <!-- Linkeo la imagen del favicon, uso formato jpg -->
     <link rel="icon" type="image/JPG" href="imagenes\foto_cara.jpg"/>
+    <!-- Linkeo iconos de fontawesome (iconos de redes sociales, etc) -->
     <script src="https://kit.fontawesome.com/11ead746a1.js" crossorigin="anonymous"></script>
+    <!-- Linkeo google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -15,7 +19,14 @@
     <title>Curriculum vitae</title>
 </head>
 <body>  
-    <nav></nav>   
+    <nav>
+        <a href="#perfil">Mi perfil</a>
+        <a href="#habilidades">Habilidades</a> 
+        <a href="#experiencia">Experiencia</a>
+        <a href="#formacion">Formación</a> 
+        <a href="#contacto" id="boton-contacto">Contacto</a>
+        
+    </nav>   
     <header>
         <h1><span id="nombre">JAIRO</span><span id="apellido"><b>GENRE BERT</b></span></h1>
         <address>
@@ -27,7 +38,7 @@
             <br>
             <a href="https://www.facebook.com/jairo.genrebert" target="_blank"><i class="fa-brands fa-facebook"></i> /jairo.genrebert</a>
             <br>
-            <a href="https://wa.me/+543415667225" target="_blank"><i class="fa-brands fa-whatsapp"></i> +543415667225</a>
+            <a href="https://wa.me/+543416543210" target="_blank"><i class="fa-brands fa-whatsapp"></i> +543416543210</a>
             <br>
             <a href="mailto:jairogenrebert@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i> jairogenrebert@gmail.com</a>
 
@@ -40,7 +51,7 @@
 
     <main>
         
-        <h2>EXPERIENCIA</h2>
+        <h2 id="experiencia">EXPERIENCIA</h2>
         <section class="exp_y_edu">
             <div class="fecha">2021 - 2023</div>
             <h3>Técnico Informático</h3>
@@ -66,11 +77,11 @@
             </ul>
         </section>
 
-        <h2>FORMACION</h2>
+        <h2 id="formacion">FORMACION</h2>
 
         <section class="exp_y_edu">
             <div class="fecha">2022 - 2023</div>
-            <h3>Licenciado en Técnicas Aplicadas al Arte Sonoro</h3>
+            <h3>Licenciatura en Técnicas Aplicadas al Arte Sonoro</h3>
             <address>U.N.R</address>
             <ul>
             </ul>
@@ -117,15 +128,15 @@
             <li>Carnet de conducir B1</li>
 
         </ul>
-
+        <br><br>
    
 
     </main>
 
     <section id="sidebar">
         <img id="foto_perfil" src="imagenes/foto_cara.JPG" alt="Foto de perfil">  
-        <H2>PERFIL</H2>
-        <p>
+        <H2 id="perfil">PERFIL</H2>
+        <p class="descripcion">
             Soy ingeniero electrónico actualmente avocado al area de sistemas, informática y redes. 
             Estoy actualmente buscando agregar experiencia como desarrollador web full stack junior. 
             Tengo también experiencia en automatización industrial y actualmente estoy profundizando en el área de sonido.
@@ -133,7 +144,7 @@
             lo cual puede ser util para acercarse mejor y mas rapidamente a las necesidades de una clientela diversa.
         </p>
 
-        <h2>HABILIDADES</h2>
+        <h2 id="habilidades">HABILIDADES</h2>
         <h3>Duras</h3>
 
             
@@ -188,9 +199,49 @@
         
     </section>
 
-    
-    <script src="JS/alturaSidebar.js"></script>
-    
-    
+    <div id="cortina"></div>
+
+    <span id="contacto">
+        <h2>CONTACTO</h2>
+        <form name="fvalida">
+            <label for="nombre">Nombre</label>
+            <br>
+            <input type="text" name="nombre" id="nombre">
+            <br>
+            <label for="apellido">Apellido</label>
+            <br>
+            <input type="text" name="apellido" id="apellido">
+            <br>
+            <label for="empresa">Empresa</label>
+            <br>
+            <input type="text" name="empresa" id="empresa">
+            <br>
+            <label for="mail">Mail</label>
+            <br>
+            <input type="text" name="mail" id="mail">
+            <br>
+            <label for="telefono">Teléfono</label>
+            <br>
+            <input type="text" name="telefono" id="cod_pais" placeholder="Cód. País">
+            <input type="number" name="telefono" id="cod_area" placeholder="cód. Area">
+            <input type="number" name="telefono" id="num_tel" placeholder="Nº sin el 15">
+            <br>
+            <label for="asunto">Asunto</label>
+            <br>
+            <input type="text" name="asunto" id="asunto">
+            <br>
+            <label for="mensaje">Mensaje</label>
+            <br>
+            <input type="text" name="mensaje" id="mensaje">
+            <br>
+            <input type="button" value="Enviar" onclick="valida_envia()">
+            <input type="button" value="Cancelar" onclick="ocultarContacto()">
+        </form>    
+    </span>
+
+    <script src="JS/ajusteDimensiones.js"></script>
+    <script src="JS/visibilidadContacto.js"></script>
+    <script src="JS/validacionContacto.js"></script>
+
 </body>
 </html>

@@ -2,15 +2,45 @@
     padding: 0;
     margin: 0;
 }
+
+
 nav{
-    text-align: center;
+    position: fixed;
+    padding-left:26vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    background-color: white;
+    width: 74vw;  
+    /* Uso flexbox para acomodar los links en el nav.  */
+    /*Aunque la pagina no es responsive, le pongo wrap para hacer que al menos el nav reacomode sus items ante cambios de zoom o de dispositivo*/
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; 
 }
+
+
+
+nav a:link {
+    text-decoration: none;
+    color: darkblue; 
+}
+nav a:visited {
+    text-decoration: none;
+    color: darkblue;
+}
+nav a:hover {
+    text-decoration:none;
+    color: blue;
+}
+
+
+
 header{
     background-color: darkblue;
     color: white;
     height: 40vh;
+    /*Establezco una grilla. La primer columna a la izquierda se deja vacía, en las demas acomodo los elementos*/
     display: grid;
-    /*grid-template-columns: repeat(2,1fr);*/
     grid-template-rows: 30vh 10vh;
     grid-template-columns: 26vw 50vw 24vw;
 }
@@ -20,8 +50,6 @@ header{
 }
 
 h1{
-    display: inline;
-    float: left;
     text-align: left;
     grid-column: 2/3;
     grid-row: 1/2;
@@ -43,13 +71,10 @@ header p{
 }
 
 
-address{
-    /*display: inline;
-    float: rigth;*/
+header address{
     grid-row: 1/3;
     grid-column: 3/4;
     margin: auto;
-    
 }
 
 address *{
@@ -59,19 +84,18 @@ address *{
 
 
 address a:link {
-    color: white;
     text-decoration: none;
+    color: white;
+    
 }
 address a:visited {
     text-decoration: none;
     color: white;
-
 }
-a:hover {
-text-decoration:none;
-color: white;
-zoom: 120%;
-
+address a:hover {
+    text-decoration:none;
+    color: white;
+    zoom: 115%;
 }
 
 #sidebar{
@@ -99,11 +123,12 @@ zoom: 120%;
     text-align: center;
    
 }
-#sidebar>p{
-    text-align: justify;
+#sidebar p{
+    text-align: center;
     
     margin: 1em;
 }
+
 #sidebar>h3{
     margin: 1em; 
 }
@@ -120,6 +145,14 @@ zoom: 120%;
     width: 10vw;
 }
 
+#descripcion{
+    text-align: center; 
+    margin: 1em;    
+}
+
+main{
+    background-color: white;
+}
 
 main *{
     font-family: 'Lato', sans-serif;
@@ -141,6 +174,7 @@ main .exp_y_edu{
     display: grid;
     grid-template-columns: 10em auto;
     grid-template-rows: 2em  1em fit-content;
+    gap: 5px;
     margin-bottom: 3vh;
 }
 main .fecha{
@@ -156,6 +190,7 @@ main .fecha{
 .exp_y_edu address{
     grid-row: 2/3;
     grid-column: 2/3; 
+    align-self: start;
 }
 
 .exp_y_edu ul{
@@ -163,3 +198,44 @@ main .fecha{
     grid-column: 2/3; 
 }
 
+main > ul{
+    margin-left: 10em;
+    padding-left: 5px;
+}
+
+#cortina{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: black;
+    opacity: 0.8;
+    visibility: hidden;
+}
+
+#contacto{
+    z-index: 3;
+    width: 50%;
+    height: fit-content;
+    position: absolute;
+    top: 30vh;
+    margin-left: 25%;
+    visibility: hidden;
+    background-color: darkblue;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+form label, h2{
+    color: white;
+}
+
+input{
+    margin-bottom: 2vh;
+    margin-top: 1px;
+}
+
+#mensaje{
+    width: 100%;
+    height: 5em;
+}
